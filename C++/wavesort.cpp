@@ -1,3 +1,7 @@
+<!-- Wave sorting is not like other sorting that is it will be printed only in increasing order of the number, it will print in wave format. -->
+
+<!-- The expected output is:  3 1 7 4 6 2 5-->
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -10,15 +14,15 @@ void swap (int arr[], int i, int j)
 
 void waveSort(int arr[], int n)
 {
-    for (int i=1;i<n;i+=2)
+    for (int i=0;i<n;i+=2)
     {
-        if (arr[i]>arr[i-1])
+        if (i>0 && arr[i-1] > arr[i])
         {
-            swap (arr,i,i-1);
+            swap (arr[i], arr[i-1]);
         }
-        if (arr[i]>arr[i+1])
+        if (arr[i+1] > arr[i] && i <= n-2)
         {
-            swap(arr,i,i+1);
+            swap(arr[i], arr[i+1]);
         }
     }
 }
@@ -37,3 +41,5 @@ int main ()
 
     return 0;
 }
+
+
