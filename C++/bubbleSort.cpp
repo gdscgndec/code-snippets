@@ -1,32 +1,55 @@
-#include<iostream>
+#include <iostream>
+#include <conio.h>
 using namespace std;
+class A
+{
+    private:
+    int n;
 
-void bubbleSort(int arr[], int n){
-    for(int i=0; i<n-1;i++){
-    	for(int j=0; j<n-1-i; j++){
-    		if(arr[j]>arr[j+1]){
-    			int temp = arr[j];
-    			arr[j] = arr[j+1];
-    			arr[j+1] = temp;		
-			}
-		}
-	}
+    public:
+    void func(){
+        int size;
+        cout<<"Enter the size of array ";
+        cin>>size;
+        n=size;
+    }
+
+    int B[];
+
+    void func1();
+
+    void check(){
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(B[j]<B[j+1]){
+                    int temp=B[j];
+                    B[j]=B[j+1];
+                    B[j+1]=temp;
+                }
+            }
+        }
+    }
+    void print(){
+        cout<<"Sorted list is"<<endl;
+        for(int i=0; i<n;i++){
+           
+            cout<<B[i]<<" ";
+        }
+    }
+};
+void A::func1(){
+    for(int i=0; i<n; i++){
+        cout<<"Enter "<<i+1<<" number ";
+        cin>>B[i];
+    }
 }
 
 int main(){
-	int n;
-	cout << "Enter the size of the Array: ";
-	cin >> n;
-	int arr[n];
-	cout << "Enter the elements of the Array: ";
-	for(int i = 0; i < n; i++){
-		cin >> arr[i];
-	}
-	bubbleSort(arr, n);
-	cout<<"\nSorted Array : \n";
-	
-	for(int i=0;i<n;i++){
-		cout<<arr[i]<<" ";
-	}
-	return 0;
+    A obj;
+    obj.func();
+    obj.func1();
+    obj.check();
+    obj.print();
+    getch();
+    return 0;
 }
