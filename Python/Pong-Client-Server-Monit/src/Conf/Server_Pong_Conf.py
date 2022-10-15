@@ -1,0 +1,17 @@
+game_name = 'Pong'
+agent_numbers = 2
+max_i = 30
+max_j = 30
+max_cycle = 5000
+ip = "0.0.0.0"
+player_port = 20002
+monitor_port = 20003
+think_time = 0.2
+auto_mode = False
+sync_mode = False
+rcg_logger = True
+rcl_logger = True
+change_goal_pos = 60  # if Goal not Happen Goal randomly change pos
+add_wall = 500  # radded new wall to game .. :) fun
+pong_lean = 3
+max_score = 3
